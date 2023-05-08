@@ -1,0 +1,6 @@
+ipython
+joblib
+numpy
+scikit-learn
+scipy
+git+https://github.com/abhinaukumar/videolib@main
