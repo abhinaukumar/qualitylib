@@ -1,0 +1,13 @@
+sphinx
+sphinx-rtd-theme
+pydata-sphinx-theme
+sphinx-autodoc-typehints
+nbsphinx
+ipython
+jupytext
+jupyter
+matplotlib
+numpy
+scipy
+scikit-learn
+git+https://github.com/abhinaukumar/videolib@main
