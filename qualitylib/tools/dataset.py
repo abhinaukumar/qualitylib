@@ -16,7 +16,7 @@ def read_dataset(dataset: ModuleType, shuffle: bool = True) -> List[Dict[str, An
         AttributeError: If `dataset` does not have a list of `dis_videos`
         KeyError: If any element of `dis_videos` does not have a 'path'
         ValueError: If any element of `dis_videos` does not have exactly one of 'score', 'mos', or 'dmos' 
-        ValueError: If a :obj:`~videolib.standard.Standard` is not provided either globally or for each video.
+        ValueError: If a :obj:`~videolib.standards.Standard` is not provided either globally or for each video.
 
     Returns:
         List of asset dictionaries
