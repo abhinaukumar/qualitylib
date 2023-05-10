@@ -8,7 +8,7 @@ setup(
     url='https://github.com/abhinaukumar/qualitylib',
     description='Package for seamlessly running quality assessment experiments in Python.',
     install_requires=[
-        'joblib'
+        'joblib',
         'numpy',
         'scipy',
         'scikit-learn',
