@@ -99,7 +99,8 @@ class FeatureExtractor:
                         result.feats = result[feat_names, 'feats']
                         result.feat_names = feat_names
                 else:
-                    Result.exists_from_asset_and_fex(asset_dict, self.name_version)
+                    if not Result.exists(asset_dict, self.name_version):
+                        raise OSError('Result file not found')
                     result=None
                 print(f'Loaded result from cache for {asset_dict["dis_path"]}')
             except OSError:
@@ -109,6 +110,8 @@ class FeatureExtractor:
                 raise RuntimeError(f'Unexpected error when loading result for {str(asset_dict)} from fex: {self.name_version}.') from err
         else:
             result = self._run_on_asset(asset_dict)
+            if not return_results:
+                result = None
 
         return result
 
