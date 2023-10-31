@@ -1,4 +1,4 @@
-from typing import Optional, List, Dict, Any
+from typing import Optional, List, Dict, Any, Callable
 
 from joblib import Parallel, delayed
 import numpy as np
@@ -11,14 +11,12 @@ class Runner:
     '''
     Wrapper class around :obj:`~qualitylib.feature_extractor.FeatureExtractor` to run feature extraction.
     '''
-    def __init__(self, fex_name: str, fex_version: Optional[str] = None, processes: int = 1, *args: Any, **kwargs: Any) -> None:
+    def __init__(self, FexClass: Callable, processes: int = 1, *args: Any, **kwargs: Any) -> None:
         '''
         Args:
-            fex_name: Name of :obj:`~qualitylib.feature_extractor.FeatureExtractor` class.
-            fex_version: Version of :obj:`~qualitylib.feature_extractor.FeatureExtractor` class.
+            FexClass: Class derived from :obj:`~qualitylib.feature_extractor.FeatureExtractor`.
             processes: Number of parallel processes to use. Defaults to 1.
         '''
-        FexClass = get_fex(fex_name, fex_version)
         self.fex = FexClass(*args, **kwargs)
         self.processes = processes
 
