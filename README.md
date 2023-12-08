@@ -11,6 +11,8 @@ QualityLIB is a library that simplifies running quality assessment experiments o
 4. Standardizing the results of quality modeling using the `Result` class.
 5. Easy interfacing with Scikit-Learn regressor models for routines such as `cross_validation`.
 
+QualityLIB is inspired by the structure of [VMAF's Python library](https://github.com/Netflix/vmaf/blob/master/resource/doc/python.md), but engineered from the ground up to be lightweight and to leverage third-party Python libraries.
+
 # Usage
 Refer to the [official documentation](https://qualitylib.readthedocs.io/en/latest/) for examples using QualityLIB and detailed descriptions of the API.
 
